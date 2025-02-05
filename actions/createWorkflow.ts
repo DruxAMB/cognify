@@ -10,7 +10,7 @@ import { auth } from "@clerk/nextjs/server";
 import { Edge } from "@xyflow/react";
 import { redirect } from "next/navigation";
 
-export const createWorkflow = (form:createWorkflowSchemaType) => {
+export const createWorkflow = async (form:createWorkflowSchemaType) => {
     const {success, data} = createWorkflowSchema.safeParse(form)
     if(!success){
         throw new Error("Invalid form data");
@@ -29,7 +29,7 @@ const result = await prisma.workflow.create({
     data:{
        userId,
        status:WorkflowStatus.DRAFT,
-       defination:JSON.stringify(initialFlow),
+       definition:JSON.stringify(initialFlow),
        ...data,
     }
 })
