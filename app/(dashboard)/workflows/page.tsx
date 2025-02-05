@@ -3,7 +3,7 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { Skeleton } from '@/components/ui/skeleton'
 import { AlertCircle, InboxIcon } from 'lucide-react'
 import React,{Suspense} from 'react'
-import CreateWorkflowDialog from './_components/createWorkflowsDialog'
+import CreateWorkflowDialog from './_components/CreateWorkflowsDialog'
 import WorkflowCard from './_components/workflowCard'
 
 const page = () => {
