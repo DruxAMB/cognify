@@ -1,4 +1,4 @@
-import useExecutionPlan from '@/components/hooks/useExecutionPlan'
+import useExecutionPlan from '@/hooks/useExecutionPlan'
 import { Button } from '@/components/ui/button'
 import { PlayIcon } from 'lucide-react'
 import React from 'react'

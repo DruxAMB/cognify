@@ -5,8 +5,8 @@ import React from "react";
 import { ReactFlowProvider } from "@xyflow/react";
 import FlowEditor from "./FlowEditor";
 import Topbar from "./topbar/Topbar";
-import {TaskMenu} from "./TaskMenu";
-import { FlowValidationContextProvider } from "@/components/context/FlowValidationContext";
+import { TaskMenu } from "./TaskMenu";
+import { FlowValidationContextProvider } from "@/context/FlowValidationContext";
 
 const Editor = ({ workflow }: { workflow: Workflow }) => {
   return (
@@ -25,7 +25,7 @@ const Editor = ({ workflow }: { workflow: Workflow }) => {
         </div>
       </ReactFlowProvider>
     </FlowValidationContextProvider>
-  )
-}
+  );
+};
 
-export default Editor
+export default Editor;
