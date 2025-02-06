@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 
 import { downloadInvoice } from "@/actions/billing/download-invoice";
 
-const InvoiceBtn = ({ id }: { id: string }) => {
+export const InvoiceBtn = ({ id }: { id: string }) => {
   const mutation = useMutation({
     mutationFn: downloadInvoice,
     onSuccess: (data) => (window.location.href = data as string),
@@ -29,5 +29,3 @@ const InvoiceBtn = ({ id }: { id: string }) => {
     </Button>
   );
 };
-
-export default InvoiceBtn;

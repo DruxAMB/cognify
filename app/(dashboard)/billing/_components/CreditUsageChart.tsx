@@ -35,7 +35,7 @@ const chartConfig = {
   },
 };
 
-const CreditUsageChart = ({
+export const CreditUsageChart = ({
   data,
   title,
   description,
@@ -102,5 +102,3 @@ const CreditUsageChart = ({
     </Card>
   );
 };
-
-export default CreditUsageChart;

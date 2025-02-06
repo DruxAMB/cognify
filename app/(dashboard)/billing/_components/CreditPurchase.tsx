@@ -19,7 +19,7 @@ import { Button } from "@/components/ui/button";
 import { purchaseCredits } from "@/actions/billing/purchase-credits";
 import { CreditsPack, PackId } from "@/types/billing";
 
-const CreditPurchase = () => {
+export const CreditPurchase = () => {
   const [selectedPack, setSelectedPack] = useState(PackId.MEDIUM);
 
   const mutation = useMutation({
@@ -80,5 +80,3 @@ const CreditPurchase = () => {
     </Card>
   );
 };
-
-export default CreditPurchase;
