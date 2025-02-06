@@ -3,7 +3,7 @@ import { TaskParam } from '@/types/task'
 import { Handle, Position, useEdges } from '@xyflow/react'
 import React from 'react'
 import NodeParamField from '../NodeParamField'
-import { ColorForHandle } from '../common'
+import { ColorForHandle } from '../Common'
 
 const NodeInput = ({input, nodeId}:{input:TaskParam; nodeId:string}) => {
 const edges = useEdges();
