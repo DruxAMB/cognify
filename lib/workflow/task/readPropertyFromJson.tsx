@@ -1,31 +1,30 @@
-import { TextIcon } from 'lucide-react';
+import { FileJson2Icon } from 'lucide-react';
 
 import { TaskParamType, TaskType } from '@/types/task';
 import { WorkflowTask } from '@/types/workflow';
 
-export const ExtractTextFromElementTask = {
-  type: TaskType.EXTRACT_TEXT_FROM_ELEMENT,
-  label: 'Extract text from element',
-  icon: (props) => <TextIcon className="stroke-rose-400" {...props} />,
+export const ReadPropertyFromJsonTask = {
+  type: TaskType.READ_PROPERTY_FROM_JSON,
+  label: 'Read property from JSON',
+  icon: (props) => <FileJson2Icon className="stroke-orange-400" {...props} />,
   isEntryPoint: false,
-  credits: 2,
+  credits: 1,
   inputs: [
     {
-      name: 'Html',
+      name: 'JSON',
       type: TaskParamType.STRING,
       required: true,
-      variant: 'textarea',
     },
     {
-      name: 'Selector',
+      name: 'Property name',
       type: TaskParamType.STRING,
       required: true,
     },
   ] as const,
   outputs: [
     {
-      name: 'Extracted text',
+      name: 'Property value',
       type: TaskParamType.STRING,
-    }, 
+    },
   ] as const,
 } satisfies WorkflowTask;

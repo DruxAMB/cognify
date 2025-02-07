@@ -1,12 +1,12 @@
-import { CodeIcon } from 'lucide-react';
+import { Link2Icon } from 'lucide-react';
 
 import { TaskParamType, TaskType } from '@/types/task';
 import { WorkflowTask } from '@/types/workflow';
 
-export const PageToHtmlTask = {
-  type: TaskType.PAGE_TO_HTML,
-  label: 'Get html from page',
-  icon: (props) => <CodeIcon className="stroke-rose-400" {...props} />,
+export const NavigateUrlTask = {
+  type: TaskType.NAVIGATE_URL,
+  label: 'Navigate Url',
+  icon: (props) => <Link2Icon className="stroke-orange-400" {...props} />,
   isEntryPoint: false,
   credits: 2,
   inputs: [
@@ -15,12 +15,13 @@ export const PageToHtmlTask = {
       type: TaskParamType.BROWSER_INSTANCE,
       required: true,
     },
+    {
+      name: 'URL',
+      type: TaskParamType.STRING,
+      required: true,
+    },
   ] as const,
   outputs: [
-    {
-      name: 'Html',
-      type: TaskParamType.STRING,
-    },
     {
       name: 'Web page',
       type: TaskParamType.BROWSER_INSTANCE,
