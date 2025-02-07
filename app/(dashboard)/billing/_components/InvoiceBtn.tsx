@@ -6,7 +6,7 @@ import { Loader2Icon } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 
-import { downloadInvoice } from "@/actions/billing/download-invoice";
+import { downloadInvoice } from "@/actions/billing/downloadInvoice";
 
 export const InvoiceBtn = ({ id }: { id: string }) => {
   const mutation = useMutation({
