@@ -4,7 +4,7 @@ import { auth } from '@clerk/nextjs/server';
 
 import { getCreditsPack, PackId } from '@/types/billing';
 import { stripe } from '@/lib/stripe/stripe';
-import { getAppUrl } from '@/lib/helper/app-url';
+import { getAppUrl } from '@/lib/helper/appUrl';
 import { redirect } from 'next/navigation';
 
 export const purchaseCredits = async (packId: PackId) => {

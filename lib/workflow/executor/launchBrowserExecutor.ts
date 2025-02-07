@@ -1,6 +1,6 @@
 import puppeteer, { Browser } from 'puppeteer';
 
-import { LaunchBrowserTask } from '@/lib/workflow/task/LaunchBrowser';
+import { LaunchBrowserTask } from '@/lib/workflow/task/launchBrowser';
 import { ExecutionEnvironment } from '@/types/executor';
 
 export async function LaunchBrowserExecutor(
